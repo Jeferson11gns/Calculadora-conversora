@@ -44,18 +44,62 @@ def octal(octa):
 	
 #converter hexadecimal
 def hexadecimal(hexa):
-	result_hex = 0
-	cont = 1
-	while (hexa >= 16):
-		resto_hex = hexa % 16
-		hexa = hexa // 16
-		result_hex = result_hex * 10 + resto_hex
-		cont = cont * 10
-		if(hexa < 16):
-			result_hex = result_hex + cont * hexa
+	result_hex = []
+	if(hexa < 16):
+		if(hexa == 10):
+			b = "A"
+			result_hex.append(b)
+		elif(hexa == 11):
+			b = "B"
+			result_hex.append(b)
+		elif(hexa == 12):
+			b = "C"
+			result_hex.append(b)
+		elif(hexa == 13):
+			b = "D"
+			result_hex.append(b)
+		elif(hexa == 14):
+			b = "E"
+			result_hex.append(b)
+		elif(hexa == 15):
+			b = "F"
+			result_hex.append(b)
+	else:
+		while (hexa >= 16):
+			resto_hex = hexa % 16
+			b = resto_hex
+			hexa = hexa // 16
+			
 		
+			if(resto_hex == 10):
+				b = "A"
+				result_hex.append(b)
+			elif(resto_hex == 11):
+				b = "B"
+				result_hex.append(b)
+			elif(resto_hex == 12):
+				b = "C"
+				result_hex.append(b)
+			elif(resto_hex == 13):
+				b = "D"
+				result_hex.append(b)
+			elif(resto_hex == 14):
+				b = "E"
+				result_hex.append(b)
+			elif(resto_hex == 15):
+				b = "F"
+				result_hex.append(b)
+			else:
+				result_hex.append(b) #pega o resto e adiciona a lista			
+
+			if(hexa < 16):
+				b = hexa
+				result_hex.append(b)
+
+	inverso_hex = result_hex[::-1] #pega a lista de tras para frente
+	for y in inverso_hex:#pecorre a lista
+		print(y, end = "")
 	
-	print(result_hex)
 	
 #programa principal
 titulo("Menu Inicial")

@@ -100,6 +100,26 @@ def hexadecimal(hexa):
 	for y in inverso_hex:#pecorre a lista
 		print(y, end = "")
 	
+
+
+
+#soma de binario
+def somaBin(num1, num2):
+	listaInt1 = []
+	listaInt2 = []
+	listaInt1.append(num1) 
+	listaInt2.append(num2)
+
+	for i in listaInt1:
+		print(i)
+	for j in listaInt2:
+		print(j)
+	
+	soma = i + j
+	
+	print(soma)
+	print(listaInt1)
+	print(listaInt2)
 	
 #programa principal
 titulo("Menu Inicial")
@@ -127,3 +147,4 @@ if(menu == 1):
 		hexadecimal(int(input("Digite o numero: ")))	
 else:
 	titulo("menu do soma binaria")
+	somaBin(str(input("digite o primeiro ")), str(input("digite o segundo ")) )
